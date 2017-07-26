@@ -15,7 +15,10 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 @Component(
 		immediate = true,
 		property = {
+		// Theoretically this shouldn't work
 		    "javax.portlet.name=Test",
+		    // it should look like this:
+		    //"javax.portlet.name=org_bsfinternational.test_portlet_Test",
 	        "mvc.command.name=test-process"
 	    },
 	    service = MVCResourceCommand.class
