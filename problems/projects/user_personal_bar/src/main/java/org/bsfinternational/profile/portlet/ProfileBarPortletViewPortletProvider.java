@@ -11,7 +11,8 @@ import com.liferay.portal.kernel.portlet.ViewPortletProvider;
 @Component(
 		immediate = true,
 		property = {
-			"model.class.name=" + PortalUserPersonalBarApplicationType.UserPersonalBar.CLASS_NAME
+			"model.class.name=" + PortalUserPersonalBarApplicationType.UserPersonalBar.CLASS_NAME,
+			"service.ranking:Integer=10"
 		},
 		service = ViewPortletProvider.class
 	)
