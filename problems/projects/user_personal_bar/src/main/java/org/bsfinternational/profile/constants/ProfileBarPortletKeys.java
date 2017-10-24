@@ -1,27 +1,10 @@
-package org.bsfinternational.profile.portlet;
+package org.bsfinternational.profile.constants;
 
-import org.bsfinternational.profile.constants.ProfileBarPortletKeys;
-import org.osgi.service.component.annotations.Component;
+/**
+ * @author Pete
+ */
+public class ProfileBarPortletKeys {
 
-import com.liferay.admin.kernel.util.PortalUserPersonalBarApplicationType;
+	public static final String ProfileBar = "ProfileBar";
 
-import com.liferay.portal.kernel.portlet.BasePortletProvider;
-import com.liferay.portal.kernel.portlet.ViewPortletProvider;
-
-@Component(
-		immediate = true,
-		property = {
-			"model.class.name=" + PortalUserPersonalBarApplicationType.UserPersonalBar.CLASS_NAME
-		},
-		service = ViewPortletProvider.class
-	)
-
-public class ProfileBarPortletViewPortletProvider 
-extends BasePortletProvider implements ViewPortletProvider{
-	
-	@Override
-	public String getPortletName() {
-		return ProfileBarPortletKeys.ProfileBar;
-	}
-	
 }
