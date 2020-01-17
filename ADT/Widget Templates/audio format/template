@@ -1,0 +1,26 @@
+<#--
+Widget templates can be used to modify the look of a
+specific application.
+
+Please use the left panel to quickly add commonly used variables.
+Autocomplete is also available and can be invoked by typing "${".
+-->
+<#if entries?has_content>
+   <#list entries as curEntry>
+        <#assign entry = curEntry 
+         assetRenderer = entry.getAssetRenderer() 
+         mediaFile = assetRenderer.getURLDownload(themeDisplay)
+        />
+        
+        ${curEntry.getTitle(locale)}
+
+        <div> 
+        
+        <audio controls>
+            <source src="${mediaFile}" type="audio/mpeg">
+        </audio>
+
+        </div>
+    
+    </#list>
+</#if>
